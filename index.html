@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>gesture Web App</title>
+    <title>Gesturs To Emoji</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -17,51 +17,48 @@
     <div class="container">
 
         <center>
-            <h3 class="btn btn-info heading">GESTURE WEB APP
-                <br>
-                <span>&#128076;</span>
-                <span>&#128077;</span>
-                <span>&#9996;</span>
-                <span>&#9994;</span>
-                <span>&#128079;</span>
-                <span>&#129304;</span>
-            </h3>
+            <h3 style="color: white">Gesturs To Emoji
+                <p style="font-size: 30px;">
+                    &#128076; | &#128077; | &#9996;
+                </p>
 
-            <br><br>
-
-            <p style="font-size: 22px;">Take a selfie of a gesture to know about it's meaning</p>
-            <p style="font-size: 18px;">On the following gestures the model is trained - </p>
-            <p style="font-size: 30px;">
-                &#128076; | &#128077; | &#9996;
-            </p>
-
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <label>Webcam View - </label>
-                <div id="camera"></div>
                 <br><br>
-                <button onclick="take_snapshot();" class="btn btn-primary">Capture Image</button>
-            </div>
 
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <label>Prediction - </label>
-                <p class="object_name" id="result_object_name"></p>
-                <p class="gesture_icon" id="result_object_gesture_icon"></p>
-            </div>
+                <p style="font-size: 22px;">Take your selfie to generate emoji
 
-            <div class="col-md-4 col-sm-12 col-xs-12">
-                <label>Snapshot - </label>
-                <div id="result"></div>
-                <br><br>
-                <button onclick="check();" class="btn btn-success">Predict Hand Gesture</button>
-            </div>
+                </p>
 
-        </center>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Webcam View- </label>
+                    <div id="camera"></div>
+                    <br><br>
+                    <button onclick="take_snapshot()" class="btn-warning">Capture Image</button></div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label> Predection 1</label>
+                    <b class="emotion_name" id="result_emotion_name"></b>
+                    <b class="emoji" id="Update_emoji"></b>
+                    <hr>
+                    <label> Predection 2</label>
+                    <b class="emotion_name" id="result_emotion_name2"></b>
+                    <b class="emoji" id="Update_emoji2"></b>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+
+
+                    <label>Selfie- </label>
+                    <div id="result"></div>
+                    <br><br>
+                    <Button onclick="check()" class="btn-danger"> Predict Emotions</Button>
+                </div>
+
+    </div>
+
+    </center>
 
     </div>
 
     <script src="main.js"></script>
 
-    <script async src="https://drv.tw/inc/wd.js"></script>
 </body>
 
 </html>
